@@ -47,7 +47,7 @@ public class PdfHandler {
         AssetManager is = context.getAssets();
         InputStream inputStream = is.open(filename);
         String outFilename = context.getFilesDir() + "/" + tempFilename;
-        FileOutputStream outputStream = context.openFileOutput(tempFilename, Context.MODE_PRIVATE);
+        FileOutputStream outputStream = context.openFileOutput(tempFilename, Context.MODE_WORLD_READABLE);
         copy(inputStream, outputStream);
         outputStream.flush();
         outputStream.close();
