@@ -31,10 +31,9 @@ public class PdfViewerPlugin extends CordovaPlugin {
 
 			JSONObject arg_object = args.getJSONObject(0);
 			String file = arg_object.getString("file");
-			String label = arg_object.getString("label");
 			
 	    	PdfHandler pdf = new PdfHandler(this.cordova.getActivity());
-	    	pdf.openPdf(file, label);
+	    	pdf.openPdf(file);
 	    	callbackContext.success();
 	    	return true;
 			

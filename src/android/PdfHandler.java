@@ -25,24 +25,24 @@ public class PdfHandler {
         this.context = context;
     }
 
-    public void openPdf(String filename, String label) {
+    public void openPdf(String filename) {
         if (isPdfAppAvailable()) {
-            copyPdfAndOpenIt(filename,label);
+            copyPdfAndOpenIt(filename);
         } else {
             showPdfWarning();
         }
     }
 
-    private void copyPdfAndOpenIt(String filename, String label) {
+    private void copyPdfAndOpenIt(String filename) {
         try {
-            File file = copyPdfFromAssetsToStorage(filename, label);
+            File file = copyPdfFromAssetsToStorage(filename);
             startPdfIntent(file);
         } catch (Exception e) {
             Log.e("PdfHandler", "Error handling the PDF file", e);
         }
     }
 
-    private File copyPdfFromAssetsToStorage(String filename, String dummy) throws Exception {
+    private File copyPdfFromAssetsToStorage(String filename) throws Exception {
         String tempFilename = "temp.pdf";
         AssetManager is = context.getAssets();
         InputStream inputStream = is.open(filename);
