@@ -12,3 +12,4 @@ var pdfViewerPlugin = {
         ); 
      }
 }
+module.exports = pdfViewerPlugin;
