@@ -6,7 +6,7 @@
     <license>Apache 2.0</license>
     <keywords>cordova,android,pdf,viewer</keywords>
     <js-module src="www/pdf-viewer.js" name="pdfviewer">
-        <clobbers target="window.openpdf" />
+        <clobbers target="window.pdfviewer" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
