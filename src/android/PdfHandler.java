@@ -42,7 +42,7 @@ public class PdfHandler {
         }
     }
 
-    private File copyPdfFromAssetsToStorage(String filename, String tempFilename) throws Exception {
+    private File copyPdfFromAssetsToStorage(String filename, String dummy) throws Exception {
         String tempFilename = "temp.pdf";
         AssetManager is = context.getAssets();
         InputStream inputStream = is.open(filename);
