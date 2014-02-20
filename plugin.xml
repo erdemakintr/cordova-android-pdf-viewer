@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="org.apache.cordova.pdfviewer" version="0.2.3">
+        id="com.anz.pdfviewer" version="0.2.3">
     <name>PdfViewer</name>
     <description>Cordova PDF Viewer Plugin</description>
     <license>Apache 2.0</license>
@@ -14,5 +14,7 @@
                    <param name="android-package" value="com.anz.pdfviewer.PdfViewerPlugin" />
             </feature>
         </config-file>
+        <source-file src="src/android/PdfViewerPlugin.java" target-dir="src/com/anz/pdfviewer" />
+        <source-file src="src/android/PdfHandler.java" target-dir="src/com/anz/pdfviewer" />
     </platform>
 </plugin>
