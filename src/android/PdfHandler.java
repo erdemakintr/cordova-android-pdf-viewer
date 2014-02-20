@@ -45,8 +45,8 @@ public class PdfHandler {
     private File copyPdfFromAssetsToStorage(String filename, String tempFilename) throws Exception {
         AssetManager is = context.getAssets();
         InputStream inputStream = is.open(filename);
-        String outFilename = context.getFilesDir() + "/" + tempFilename;
-        FileOutputStream outputStream = context.openFileOutput(tempFilename, Context.MODE_WORLD_READABLE);
+        String outFilename = context.getFilesDir() + "/" + filename;
+        FileOutputStream outputStream = context.openFileOutput(filename, Context.MODE_PRIVATE);
         copy(inputStream, outputStream);
         outputStream.flush();
         outputStream.close();
